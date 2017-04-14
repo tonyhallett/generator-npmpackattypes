@@ -1,6 +1,6 @@
 {
   "name": "generator-npmpackattypes",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "npm pack and copies directories to node_modules/@types",
   "homepage": "",
   "author": {
@@ -26,8 +26,14 @@
     "jest-cli": "^19.0.1"
   },
   "dependencies": {
-    "yeoman-generator": "^1.0.0",
     "chalk": "^1.1.3",
+    "delete": "^0.3.2",
+    "file-system": "^2.2.2",
+    "gunzip-maybe": "^1.4.0",
+    "packandextract": "^1.0.0",
+    "path": "^0.12.7",
+    "tar-stream": "^1.5.2",
+    "yeoman-generator": "^1.0.0",
     "yosay": "^2.0.0"
   },
   "jest": {

@@ -1,36 +1,27 @@
-'use strict';
+﻿'use strict';
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
+const packandextract = require('packandextract');
+const path = require('path');
 
 module.exports = class extends Generator {
-  prompting() {
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the finest ' + chalk.red('generator-npmpackattypes') + ' generator!'
-    ));
-
-    const prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    return this.prompt(prompts).then(props => {
-      // To access props later use this.props.someAnswer;
-      this.props = props;
-    });
+    constructor(args, opts) {
+        super(args, opts);
+        this.argument("pack", { required: true });
+    }
+  
+  _packAndExtractTypescriptDefnFilesToAtTypes(packArg) {
+      packandextract(packArg, "node_modules/@types/", (filePath) => {
+          if (path.basename(filePath) != filePath) {
+              return true;
+          }
+          return false;
+      }, true);
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
+      this._packAndExtractTypescriptDefnFilesToAtTypes(this.options.pack);
   }
 
-  install() {
-    this.installDependencies();
-  }
 };
