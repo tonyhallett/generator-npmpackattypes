@@ -30,6 +30,7 @@ for this example, the package is on github and npm so any of the following could
 
 git://github.com/tonyhallett/yeoman-ts-definitions.git#master ( definition g )
 yeoman-ts-definitions ( definition f )
+"C:\Users\mine\Documents\Javascript Projects\yeoman-ts-definitions" ( definition a)
 
 e) npm yo npmpackattypes argumentFromD)
 
