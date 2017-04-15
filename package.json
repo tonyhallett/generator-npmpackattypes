@@ -1,7 +1,7 @@
 {
   "name": "generator-npmpackattypes",
-  "version": "1.0.0",
-  "description": "npm pack and copies directories to node_modules/@types",
+  "version": "1.0.1",
+  "description": "npm pack and copies directories to node_modules/@types.  With --d option can remove as well",
   "homepage": "",
   "author": {
     "name": "Tony Hallett",
@@ -14,7 +14,8 @@
   "main": "generators/index.js",
   "keywords": [
     "npm",
-    "yeoman-generator"
+    "yeoman-generator",
+    "@types"
   ],
   "devDependencies": {
     "yeoman-test": "^1.6.0",
@@ -27,10 +28,12 @@
   },
   "dependencies": {
     "chalk": "^1.1.3",
+    "deepmerge": "^1.3.2",
     "delete": "^0.3.2",
     "file-system": "^2.2.2",
+    "fs-promise": "^2.0.2",
     "gunzip-maybe": "^1.4.0",
-    "packandextract": "^1.0.2",
+    "packandextract": "^2.0.0",
     "path": "^0.12.7",
     "tar-stream": "^1.5.2",
     "yeoman-generator": "^1.0.0",

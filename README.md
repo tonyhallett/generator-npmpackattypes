@@ -25,14 +25,18 @@ root
 b) npm install -g yo
 c) npm install -g generator-npmpackattypes
 d) determine the argument for this generator depending on where your typescript definition folders can be found
-This generator calls npm pack with this argument and as such works with the definition of a package - see https://docs.npmjs.com/cli/install
+This generator calls npm pack with this argument and as such ( should [ only tested with the examples formats below ]) work with the definition of a package - see https://docs.npmjs.com/cli/install
 for this example, the package is on github and npm so any of the following could be used:
 
-https://github.com/tonyhallett/yeoman-ts-definitions/tarball/master ( definition c )
 git://github.com/tonyhallett/yeoman-ts-definitions.git#master ( definition g )
 yeoman-ts-definitions ( definition f )
 
 e) npm yo npmpackattypes argumentFromD)
+
+To remove type definitions :
+
+npm yo npmpackattypes argumentFromD) --d
+
 
 
 

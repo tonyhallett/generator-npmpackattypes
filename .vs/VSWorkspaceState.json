@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\app"
+    "\\generators\\app",
+    "\\tonyhtarball"
   ],
   "SelectedNode": "\\generators\\app\\index.js",
   "PreviewInSolutionExplorer": false
