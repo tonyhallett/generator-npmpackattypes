@@ -36,6 +36,7 @@
     "packandextract": "^2.0.0",
     "path": "^0.12.7",
     "tar-stream": "^1.5.2",
+    "tmp": "0.0.31",
     "yeoman-generator": "^1.0.0",
     "yosay": "^2.0.0"
   },
